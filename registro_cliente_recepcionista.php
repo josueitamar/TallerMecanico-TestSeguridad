@@ -60,7 +60,7 @@ fin:
 <!-- MODAL REGISTRO EXISTOSO -->
 <?php if ($modalRegistroExitoso): ?>
 <dialog open id="modal_registro_exitoso">
-    <p style="text-align:center;"><strong>Registro de cliente exitoso</strong></p>
+    <p style="text-align:center;"><strong>Registro exitoso</strong></p>
     <div style="text-align:center;">
         <form method="get" action="recepcionista.php">
             <button type="submit">Volver</button>
