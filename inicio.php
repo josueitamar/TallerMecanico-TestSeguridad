@@ -6,9 +6,60 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="estilopagina.css?v=<?= time() ?>"> 
     <title>WA </title>
-    
+    <style>
+        .theme-toggle-btn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 9999;
+            padding: 10px 15px;
+            background-color: #333;
+            color: #fff;
+            border: 2px solid #ffa154;
+            border-radius: 5px;
+            cursor: pointer;
+            font-family: 'Big_Shoulders_Medium', Arial, sans-serif;
+            font-size: 16px;
+        }
+
+        body.dark-mode {
+            background-color: #121212 !important;
+            color: #e0e0e0 !important;
+        }
+
+        body.dark-mode .encabezado,
+        body.dark-mode .PieDePagina {
+            background-color: #2c2c2c !important;
+        }
+
+        body.dark-mode .nav,
+        body.dark-mode .redes,
+        body.dark-mode .direc {
+            color: #ffa154 !important;
+        }
+
+        body.dark-mode .nav:hover {
+            background-color: #444 !important;
+        }
+
+        body.dark-mode .in {
+            background: rgba(0, 0, 0, 0.85) !important;
+            color: #ffffff !important;
+        }
+
+        body.dark-mode .prom-opi h2 {
+            color: #ffa154 !important;
+        }
+
+        body.dark-mode .theme-toggle-btn {
+            background-color: #ffa154;
+            color: #121212;
+            border-color: #fff;
+        }
+    </style>
 </head>
 <body>
+    <button id="theme-toggle" class="theme-toggle-btn">Intercambiar Modo</button>
     <?php 
         include("navegador.php");
     ?>
@@ -96,5 +147,26 @@
         include("piedepagina.php");
     ?>
     <script src="logout_control.js"></script>
+    <script>
+        const themeToggle = document.getElementById('theme-toggle');
+        const body = document.body;
+
+        // Check for saved theme preference
+        const currentTheme = localStorage.getItem('theme');
+        if (currentTheme === 'dark') {
+            body.classList.add('dark-mode');
+        }
+
+        themeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+
+            // Save preference to localStorage
+            if (body.classList.contains('dark-mode')) {
+                localStorage.setItem('theme', 'dark');
+            } else {
+                localStorage.setItem('theme', 'light');
+            }
+        });
+    </script>
 </body>
 </html>
