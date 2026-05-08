@@ -111,7 +111,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['guardar_rec'])) {
     <!-- MODAL DATOS GUARDADOS -->
     <?php if ($modalGuardadoExito): ?>
     <dialog open>
-        <p><strong>Datos guardados con éxito.</strong></p>
+        <p><strong>Datos guardados con satisfactoriamente.</strong></p>
         <form method="get" action="modificacion_cliente.php">
             <button type="submit">Aceptar</button>
         </form>
