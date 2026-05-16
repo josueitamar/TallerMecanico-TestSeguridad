@@ -236,7 +236,7 @@ try {
             <div class="cons_historial">
                 <br>
                 <label for="historial">HISTORIAL DEL VEHICULO</label>
-                <h3>Patente del vehiculo</h3>
+                <h3>Placa del vehiculo</h3>
                 <input type="text" name="historial" id="historial">
             </div>
             <br>
@@ -258,4 +258,3 @@ try {
     <script src="control_inactividad.js"></script>
 </body>
 </html>
-
