@@ -86,6 +86,14 @@
             <h2>MOTOR COMPLETO</h2>
         <h3>DESARME Y REPARACION COMPLETA DE MOTOR</h3>
         </div>  
+
+        <div>
+            <div class="item_serv">
+                <img src="servicios/carwash.png" alt="">
+            </div>
+            <h2>CARWASH</h2>
+            <h3>LAVADO, PULIDO Y ENCERADO.</h3>
+        </div>
     </section >
 
     <?php 
